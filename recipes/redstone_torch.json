@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "redstone_torch",
+    "label": "Redstone Torch",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "stick": 1,
+        "redstone": 1
+    }
+}

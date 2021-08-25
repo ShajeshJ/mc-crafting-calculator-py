@@ -1,0 +1,9 @@
+{
+    "_type": "craftable",
+    "id": "chest",
+    "label": "Chest",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "planks": 8
+    }
+}

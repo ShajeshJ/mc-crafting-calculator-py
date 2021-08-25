@@ -1,0 +1,9 @@
+{
+    "_type": "craftable",
+    "id": "wooden_slab",
+    "label": "Wooden Slab",
+    "craft_amt": 6,
+    "raw_craft_costs": {
+        "planks": 3
+    }
+}

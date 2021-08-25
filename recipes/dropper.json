@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "dropper",
+    "label": "Dropper",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "redstone": 1,
+        "cobblestone": 7
+    }
+}

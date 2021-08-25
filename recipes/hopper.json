@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "hopper",
+    "label": "Hopper",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "chest": 1,
+        "iron": 5
+    }
+}

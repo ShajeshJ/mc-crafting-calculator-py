@@ -1,0 +1,9 @@
+{
+    "_type": "craftable",
+    "id": "red_carpet",
+    "label": "Red Carpet",
+    "craft_amt": 3,
+    "raw_craft_costs": {
+        "red_wool": 2
+    }
+}

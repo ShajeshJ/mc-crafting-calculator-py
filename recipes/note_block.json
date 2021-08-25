@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "note_block",
+    "label": "Note Block",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "planks": 8,
+        "redstone": 1
+    }
+}

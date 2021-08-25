@@ -1,0 +1,9 @@
+{
+    "_type": "craftable",
+    "id": "glowstone",
+    "label": "Glowstone",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "glowstone_dust": 4
+    }
+}

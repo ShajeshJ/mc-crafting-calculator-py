@@ -1,0 +1,12 @@
+{
+    "_type": "craftable",
+    "id": "piston",
+    "label": "Piston",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "redstone": 1,
+        "cobblestone": 4,
+        "iron": 1,
+        "planks": 3
+    }
+}

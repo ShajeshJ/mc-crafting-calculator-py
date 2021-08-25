@@ -1,0 +1,9 @@
+{
+    "_type": "craftable",
+    "id": "composter",
+    "label": "Composter",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "wooden_slab": 7
+    }
+}

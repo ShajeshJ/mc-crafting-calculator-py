@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "yellow_glass",
+    "label": "Yellow Stained Glass",
+    "craft_amt": 8,
+    "raw_craft_costs": {
+        "yellow_dye": 1,
+        "glass": 8
+    }
+}

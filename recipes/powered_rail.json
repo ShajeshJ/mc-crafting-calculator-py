@@ -1,0 +1,11 @@
+{
+    "_type": "craftable",
+    "id": "powered_rail",
+    "label": "Powered Rail",
+    "craft_amt": 6,
+    "raw_craft_costs": {
+        "gold": 6,
+        "stick": 1,
+        "redstone": 1
+    }
+}

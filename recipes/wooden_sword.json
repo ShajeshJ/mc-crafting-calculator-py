@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "wooden_sword",
+    "label": "Wooden Sword",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "stick": 1,
+        "planks": 2
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "_type": "craftable",
+    "id": "stick",
+    "label": "Stick",
+    "craft_amt": 4,
+    "raw_craft_costs": {
+        "planks": 2
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "_type": "craftable",
+    "id": "comparator",
+    "label": "Redstone Comparator",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "stone": 3,
+        "quartz": 1,
+        "redstone_torch": 3
+    }
+}

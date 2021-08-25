@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "sea_lantern",
+    "label": "Sea Lantern",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "prismarine_shard": 4,
+        "prismarine_crystal": 5
+    }
+}

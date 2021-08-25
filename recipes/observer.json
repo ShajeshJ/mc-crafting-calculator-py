@@ -1,0 +1,11 @@
+{
+    "_type": "craftable",
+    "id": "observer",
+    "label": "Observer",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "cobblestone": 6,
+        "redstone": 2,
+        "quartz": 1
+    }
+}

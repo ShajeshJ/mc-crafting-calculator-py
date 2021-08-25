@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "green_glass",
+    "label": "Green Stained Glass",
+    "craft_amt": 8,
+    "raw_craft_costs": {
+        "green_dye": 1,
+        "glass": 8
+    }
+}

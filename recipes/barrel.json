@@ -1,0 +1,10 @@
+{
+    "_type": "craftable",
+    "id": "barrel",
+    "label": "Barrel",
+    "craft_amt": 1,
+    "raw_craft_costs": {
+        "wooden_slab": 2,
+        "planks": 6
+    }
+}
