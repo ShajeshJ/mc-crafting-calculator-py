@@ -1,8 +1,16 @@
+from dataclasses import dataclass
 from models.items.base_item import BaseItem
 from typing import Dict, ItemsView, List, Tuple
 from libraries.items import ITEM_RECIPES, get_item
 from collections import OrderedDict
 from tabulate import tabulate
+
+
+@dataclass
+class CraftResult:
+    excess_items: Dict[BaseItem, int]
+    craft_steps: OrderedDict[BaseItem, int]
+    raw_item_costs: Dict[BaseItem, int]
 
 
 def run():
@@ -20,7 +28,32 @@ def run():
         else:
             break
 
-    craft_items(crafting_stack)
+    craft_results = craft_items(crafting_stack)
+
+    print("\nCrafting Costs:")
+    print("---------------")
+    pprint_data(
+        craft_results.raw_item_costs.items(),
+        headers=["Raw Item", "Amount", "Amount in Stacks"],
+    )
+
+    print("\n---------------")
+
+    print("\nCraft Steps:")
+    print("------------")
+    pprint_data(
+        craft_results.craft_steps.items(),
+        headers=["Item To Craft", "Amount", "Amount in Stacks"],
+    )
+
+    print("\n---------------")
+
+    print("\nExcess Items:")
+    print("-------------")
+    pprint_data(
+        craft_results.excess_items.items(),
+        headers=["Excess Item", "Amount", "Amount in Stacks"],
+    )
 
 
 def query_item(item_id: str):
@@ -61,24 +94,10 @@ def craft_items(crafting_stack: List[Tuple[BaseItem, int]]):
 
     excess_items = {k: v for k, v in excess_items.items() if v > 0}
 
-    print("\nCrafting Costs:")
-    print("---------------")
-    pprint_data(raw_costs.items(), headers=["Raw Item", "Amount", "Amount in Stacks"])
-
-    print("\n---------------")
-
-    print("\nCraft Steps:")
-    print("------------")
-    pprint_data(
-        craft_steps.items(), headers=["Item To Craft", "Amount", "Amount in Stacks"]
-    )
-
-    print("\n---------------")
-
-    print("\nExcess Items:")
-    print("-------------")
-    pprint_data(
-        excess_items.items(), headers=["Excess Item", "Amount", "Amount in Stacks"]
+    return CraftResult(
+        excess_items=excess_items,
+        craft_steps=craft_steps,
+        raw_item_costs=raw_costs,
     )
 
 
