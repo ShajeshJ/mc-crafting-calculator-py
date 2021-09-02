@@ -4,18 +4,14 @@ from models.items.base_item import BaseItem
 from models.items.craftable_item import CraftableItem
 import os
 from typing import Dict
-from libraries.items import ITEM_RECIPES, get_item, reload_item_recipes
+from libraries.items import get_item, reload_item_recipes
 from models.items.raw_item import RawItem
 
 
 def run():
     while True:
         item_id = input("\nID of item? ")
-        try:
-            get_item(item_id)
-        except StopIteration:
-            pass
-        else:
+        if get_item(item_id) is not None:
             print("Item already exists. Try another ID")
             continue
 

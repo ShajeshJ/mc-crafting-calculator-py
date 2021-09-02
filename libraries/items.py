@@ -16,13 +16,20 @@ ITEM_RECIPES: List[BaseItem] = []
 
 
 def get_item(item_id: str):
-    return next(filter(lambda x: x.id == item_id, ITEM_RECIPES))
+    """Returns the item with the given item_id or None if no such item exists."""
+    return next(filter(lambda i: i.id == item_id, ITEM_RECIPES), None)
+
+
+def filter_items(partial: str):
+    """Retrieve all items whose labels contain the given partial (non-case sensitive).
+    Passing in an empty string will return all items.
+    """
+    return filter(lambda i: partial.lower() in i.label.lower(), ITEM_RECIPES)
 
 
 def reload_item_classes():
     """Small helper function to load `ITEM_CLASSES` with all
-    classes that subclass :py:func:`BaseItem <models.items.base_item.BaseItem>`
-    """
+    classes that subclass :py:func:`BaseItem <models.items.base_item.BaseItem>`."""
     global ITEM_CLASSES
     ITEM_CLASSES = {}
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from models.items.base_item import BaseItem
 from typing import Dict, ItemsView, List, Tuple
-from libraries.items import ITEM_RECIPES, get_item
+from libraries.items import get_item
 from collections import OrderedDict
 from tabulate import tabulate
 
@@ -17,12 +17,11 @@ def run():
     crafting_stack: List[Tuple[BaseItem, int]] = []
 
     while True:
-        next_item = input("Next to craft? ")
-        if next_item:
-            try:
-                crafting_stack.append(query_item(next_item))
+        if next_item_id := input("Next to craft? "):
+            if result := query_item(next_item_id):
+                crafting_stack.append(result)
                 print("")
-            except StopIteration:
+            else:
                 print("\nInvalid item id. Try again...")
                 continue
         else:
@@ -58,6 +57,10 @@ def run():
 
 def query_item(item_id: str):
     item = get_item(item_id)
+
+    if item is None:
+        return None
+
     amt = int(input(f"How many {item.label} do you want to craft? "))
     return item, amt
 
